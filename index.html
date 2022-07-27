@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário - Wall Jobs</title>
+</head>
+
+<!--Estilo CSS-->
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: #5F7C8A;
+  }
+  form{
+    background-color: white;
+    max-width: 500px;
+    width: 70%;
+    padding: 20px;
+    position: absolute;
+  }
+  .login{
+    left: 30%;
+    top: 50%;
+    transform: translate(-30%,-50%);
+  }
+  .cadastro{
+    left: 70%;
+    top: 50%;
+    transform: translate(-70%,-50%);
+  }
+  form h3{
+    text-align: center;
+    color: #5F7C8A;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  form input[type=text], form input[type=password]{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+  }
+
+form input[type=submit]{
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  background: #5F7C8A;
+  color: white;
+  border: 0;
+  border-radius: 20px;
+  transition: 1s;
+}
+form input[type=submit]:hover{
+  background-color: #4A5F6A;
+}
+form input[type=text]:focus{
+  outline: 0;
+}
+form input[type=password]:focus{
+  outline: 0;
+}
+</style>
+
+<body>
+  <form class="login">
+    <h3>Login</h3>
+    <input type="text" name="email" placeholder="Digite seu e-mail"/>
+    <input type="password" name="senha" placeholder="Digite sua senha"/>
+    <input type="submit" name="acao" value="Entrar"/>
+
+  </form>
+  <form class="cadastro">
+    <h3>Cadastro</h3>
+    <input type="text" name="nome" placeholder="Nome"/>
+    <input type="text" name="sobrenome" placeholder="Sobrenome"/>
+    <input type="text" name="email" placeholder="E-mail"/>
+    <input type="password" name="senha" placeholder="Digite uma senha"/>
+    <input type="password" name="senha" placeholder="Digite a senha novamente"/>
+    <input type="submit" name="acao" value="Cadastrar"/>
+  </form>
+  <script>
+    var email = document.getElementById('email');
+
+    email.addEventListener('focus',()=>{
+      email.style.borderColor = "#4A5F6A";
+    });
+  </script>
+</body>
+</html>
